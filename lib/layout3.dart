@@ -8,6 +8,11 @@ class Layout3 extends StatelessWidget {
       appBar: AppBar(
         title: Text("Layout 3"),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.play_arrow),
+        backgroundColor: Colors.blue,
+      ),
       body: Row(
         children: [
           Expanded(
@@ -126,19 +131,6 @@ class Layout3 extends StatelessWidget {
               margin: EdgeInsets.only(left: 10),
             ),
           ),
-          // Stack(
-          //   children: [
-          //     Positioned(
-          //         top: 100,
-          //         left: 50,
-          //         right: 0,
-          //         child: Container(
-          //           color: Colors.black,
-          //           width: 100,
-          //           height: 100,
-          //         ))
-          //   ],
-          // )
         ],
       ),
     );
