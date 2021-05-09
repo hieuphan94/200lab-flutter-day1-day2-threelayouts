@@ -21,12 +21,12 @@ class MainPage extends StatelessWidget {
     return MaterialApp(
       title: 'Welcome to Fluter',
       home: Scaffold(
-          appBar: AppBar(
-            title: Text("Thee Layouts"),
-          ),
+          // appBar: AppBar(
+          //   title: Text("Thee Layouts"),
+          // ),
           body: Center(
             child: Column(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
