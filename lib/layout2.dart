@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Layout2 extends StatelessWidget {
+  var cirWidthAndHeight = 73.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,57 +31,57 @@ class Layout2 extends StatelessWidget {
                         runSpacing: 20.0,
                         children: [
                           Container(
-                            width: 73,
-                            height: 73,
+                            width: cirWidthAndHeight,
+                            height: cirWidthAndHeight,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color.fromRGBO(172, 169, 190, 1)),
                           ),
                           Container(
-                            width: 73,
-                            height: 73,
+                            width: cirWidthAndHeight,
+                            height: cirWidthAndHeight,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color.fromRGBO(225, 209, 222, 1)),
                           ),
                           Container(
-                            width: 73,
-                            height: 73,
+                            width: cirWidthAndHeight,
+                            height: cirWidthAndHeight,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color.fromRGBO(238, 227, 235, 1)),
                           ),
                           Container(
-                            width: 73,
-                            height: 73,
+                            width: cirWidthAndHeight,
+                            height: cirWidthAndHeight,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color.fromRGBO(246, 240, 244, 1)),
                           ),
                           Container(
-                            width: 73,
-                            height: 73,
+                            width: cirWidthAndHeight,
+                            height: cirWidthAndHeight,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color.fromRGBO(53, 64, 53, 1)),
                           ),
                           Container(
-                            width: 73,
-                            height: 73,
+                            width: cirWidthAndHeight,
+                            height: cirWidthAndHeight,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color.fromRGBO(60, 72, 58, 1)),
                           ),
                           Container(
-                            width: 73,
-                            height: 73,
+                            width: cirWidthAndHeight,
+                            height: cirWidthAndHeight,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color.fromRGBO(169, 170, 192, 1)),
                           ),
                           Container(
-                            width: 73,
-                            height: 73,
+                            width: cirWidthAndHeight,
+                            height: cirWidthAndHeight,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color.fromRGBO(186, 178, 199, 1)),
