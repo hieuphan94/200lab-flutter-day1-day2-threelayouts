@@ -9,9 +9,9 @@ class Layout1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Layout 1"),
-        ),
+        // appBar: AppBar(
+        //   title: Text("Layout 1"),
+        // ),
         body: Column(
           children: <Widget>[
             Image.asset(

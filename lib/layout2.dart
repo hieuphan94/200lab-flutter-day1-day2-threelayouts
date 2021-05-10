@@ -10,9 +10,9 @@ class Layout2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Layout 2"),
-        ),
+        // appBar: AppBar(
+        //   title: Text("Layout 2"),
+        // ),
         body: Column(
           children: <Widget>[
             Expanded(
