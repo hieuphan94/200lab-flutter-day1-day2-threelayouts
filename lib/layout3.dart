@@ -5,9 +5,9 @@ class Layout3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Layout 3"),
-      ),
+      // appBar: AppBar(
+      //   title: Text("Layout 3"),
+      // ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: const Icon(Icons.play_arrow),
@@ -114,7 +114,8 @@ class Layout3 extends StatelessWidget {
                   ],
                 ),
                 Positioned(
-                    top: MediaQuery.of(context).size.height * 0.41,
+                    top: MediaQuery.of(context).size.height * 3 / 7 +
+                        MediaQuery.of(context).size.height / 14,
                     left: MediaQuery.of(context).size.width / 8,
                     right: MediaQuery.of(context).size.width / 4,
                     child: Container(
