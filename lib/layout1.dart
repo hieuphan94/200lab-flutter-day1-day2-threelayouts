@@ -5,6 +5,7 @@ class Layout1 extends StatelessWidget {
   final recWidth = 50.0;
   final recHeight = 130.0;
   final textColor = 0x707070;
+  final textString = "color palette";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +26,7 @@ class Layout1 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    "color palette",
+                    textString,
                     style: TextStyle(
                         fontFamily: 'Nimbus',
                         fontSize: 40,

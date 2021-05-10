@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class Layout2 extends StatelessWidget {
   final cirWidthAndHeight = 73.0;
   final textColor = 0x707070;
+  final textString = "color palette";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +19,7 @@ class Layout2 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    "color palette",
+                    textString,
                     style: TextStyle(
                         fontFamily: 'Nimbus',
                         fontSize: 40,
