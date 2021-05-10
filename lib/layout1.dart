@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class Layout1 extends StatelessWidget {
-  final recWidth = 50.0;
-  final recHeight = 130.0;
-  final textColor = 0x707070;
+  final spacing = 10;
+  final textColor = "#707070";
   final textString = "color palette";
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class Layout1 extends StatelessWidget {
             Image.asset(
               'assets/images/layout1.png',
               width: double.infinity,
-              height: 500,
+              height: MediaQuery.of(context).size.width * 1,
               fit: BoxFit.cover,
             ),
             Expanded(
@@ -30,7 +30,7 @@ class Layout1 extends StatelessWidget {
                     style: TextStyle(
                         fontFamily: 'Nimbus',
                         fontSize: 40,
-                        color: Color(textColor),
+                        color: HexColor(textColor),
                         fontWeight: FontWeight.w300),
                   ),
                   Column(
@@ -39,12 +39,12 @@ class Layout1 extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          renderContainer(0x313036),
-                          renderContainer(0x1B304B),
-                          renderContainer(0x344869),
-                          renderContainer(0xB1B8C0),
-                          renderContainer(0xD5D5D5),
-                          renderContainer(0xF1F1EF)
+                          renderContainer(context, "#313036"),
+                          renderContainer(context, "#1B304B"),
+                          renderContainer(context, "#344869"),
+                          renderContainer(context, "#B1B8C0"),
+                          renderContainer(context, "#D5D5D5"),
+                          renderContainer(context, "#F1F1EF")
                         ],
                       )
                     ],
@@ -56,7 +56,10 @@ class Layout1 extends StatelessWidget {
         ));
   }
 
-  Widget renderContainer(int color) {
-    return Container(width: recWidth, height: recHeight, color: Color(color));
+  Widget renderContainer(BuildContext context, String color) {
+    return Container(
+        decoration: BoxDecoration(color: HexColor(color)),
+        width: (MediaQuery.of(context).size.width - spacing * 7) / 6,
+        height: (MediaQuery.of(context).size.width - spacing * 7) / 6 * 2.5);
   }
 }

@@ -114,13 +114,12 @@ class Layout3 extends StatelessWidget {
                   ],
                 ),
                 Positioned(
-                    top: 375,
-                    left: 50,
-                    right: 70,
+                    top: MediaQuery.of(context).size.height * 0.41,
+                    left: MediaQuery.of(context).size.width / 8,
+                    right: MediaQuery.of(context).size.width / 4,
                     child: Container(
-                      color: Colors.black.withOpacity(0.4),
-                      height: 200,
-                    ))
+                        color: Colors.black.withOpacity(0.4),
+                        height: MediaQuery.of(context).size.width * 3 / 8))
               ],
             ),
           ),

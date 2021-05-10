@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class Layout2 extends StatelessWidget {
-  final cirWidthAndHeight = 73.0;
-  final textColor = 0x707070;
+  final textColor = "#707070";
   final textString = "color palette";
+  final spacing = 20.0;
+  final runSpacing = 10.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,23 +25,23 @@ class Layout2 extends StatelessWidget {
                     style: TextStyle(
                         fontFamily: 'Nimbus',
                         fontSize: 40,
-                        color: Color(textColor),
+                        color: HexColor(textColor),
                         fontWeight: FontWeight.w300),
                   ),
                   Column(
                     children: [
                       Wrap(
-                        spacing: 20.0,
-                        runSpacing: 20.0,
+                        spacing: spacing,
+                        runSpacing: runSpacing,
                         children: [
-                          renderContainer(0xACA9BE),
-                          renderContainer(0xE1D1DE),
-                          renderContainer(0xEEE3EB),
-                          renderContainer(0xF6F0F4),
-                          renderContainer(0x354035),
-                          renderContainer(0x3C483A),
-                          renderContainer(0xA9AAC0),
-                          renderContainer(0xBAB2C7),
+                          renderContainer(context, "#ACA9BE"),
+                          renderContainer(context, "#E1D1DE"),
+                          renderContainer(context, "#EEE3EB"),
+                          renderContainer(context, "#F6F0F4"),
+                          renderContainer(context, "#354035"),
+                          renderContainer(context, "#3C483A"),
+                          renderContainer(context, "#A9AAC0"),
+                          renderContainer(context, "#BAB2C7"),
                         ],
                       )
                     ],
@@ -49,7 +51,7 @@ class Layout2 extends StatelessWidget {
             ),
             Image.asset(
               'assets/images/layout2.png',
-              height: 500,
+              height: MediaQuery.of(context).size.width * 1,
               width: double.infinity,
               fit: BoxFit.cover,
               alignment: Alignment.bottomLeft,
@@ -57,7 +59,12 @@ class Layout2 extends StatelessWidget {
           ],
         ));
   }
-  Widget renderContainer(int color) {
-    return Container(width: cirWidthAndHeight, height: cirWidthAndHeight, color: Color(color));
+
+  Widget renderContainer(BuildContext context, String color) {
+    return Container(
+        decoration: new BoxDecoration(
+            color: HexColor(color), borderRadius: BorderRadius.circular(50)),
+        width: (MediaQuery.of(context).size.width - spacing * 4) / 4,
+        height: (MediaQuery.of(context).size.width - spacing * 4) / 4);
   }
 }
