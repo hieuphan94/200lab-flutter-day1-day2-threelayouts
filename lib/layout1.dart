@@ -2,8 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Layout1 extends StatelessWidget {
-  var recWidth = 50.0;
-  var recHeight = 130.0;
+  final recWidth = 50.0;
+  final recHeight = 130.0;
+  final textColor = 0x707070;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +29,7 @@ class Layout1 extends StatelessWidget {
                     style: TextStyle(
                         fontFamily: 'Nimbus',
                         fontSize: 40,
-                        color: Color.fromRGBO(112, 112, 112, 1),
+                        color: Color(textColor),
                         fontWeight: FontWeight.w300),
                   ),
                   Column(
@@ -37,30 +38,12 @@ class Layout1 extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Container(
-                              width: recWidth,
-                              height: recHeight,
-                              color: Color.fromRGBO(49, 48, 54, 1)),
-                          Container(
-                              width: recWidth,
-                              height: recHeight,
-                              color: Color.fromRGBO(27, 48, 75, 1)),
-                          Container(
-                              width: recWidth,
-                              height: recHeight,
-                              color: Color.fromRGBO(52, 72, 105, 1)),
-                          Container(
-                              width: recWidth,
-                              height: recHeight,
-                              color: Color.fromRGBO(177, 184, 192, 1)),
-                          Container(
-                              width: recWidth,
-                              height: recHeight,
-                              color: Color.fromRGBO(213, 213, 213, 1)),
-                          Container(
-                              width: recWidth,
-                              height: recHeight,
-                              color: Color.fromRGBO(241, 241, 239, 1)),
+                          renderContainer(0x313036),
+                          renderContainer(0x1B304B),
+                          renderContainer(0x344869),
+                          renderContainer(0xB1B8C0),
+                          renderContainer(0xD5D5D5),
+                          renderContainer(0xF1F1EF)
                         ],
                       )
                     ],
@@ -70,5 +53,9 @@ class Layout1 extends StatelessWidget {
             )
           ],
         ));
+  }
+
+  Widget renderContainer(int color) {
+    return Container(width: recWidth, height: recHeight, color: Color(color));
   }
 }

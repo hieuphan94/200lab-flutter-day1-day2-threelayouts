@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Layout2 extends StatelessWidget {
-  var cirWidthAndHeight = 73.0;
+  final cirWidthAndHeight = 73.0;
+  final textColor = 0x707070;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +22,7 @@ class Layout2 extends StatelessWidget {
                     style: TextStyle(
                         fontFamily: 'Nimbus',
                         fontSize: 40,
-                        color: Color.fromRGBO(112, 112, 112, 1),
+                        color: Color(textColor),
                         fontWeight: FontWeight.w300),
                   ),
                   Column(
@@ -30,62 +31,14 @@ class Layout2 extends StatelessWidget {
                         spacing: 20.0,
                         runSpacing: 20.0,
                         children: [
-                          Container(
-                            width: cirWidthAndHeight,
-                            height: cirWidthAndHeight,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color.fromRGBO(172, 169, 190, 1)),
-                          ),
-                          Container(
-                            width: cirWidthAndHeight,
-                            height: cirWidthAndHeight,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color.fromRGBO(225, 209, 222, 1)),
-                          ),
-                          Container(
-                            width: cirWidthAndHeight,
-                            height: cirWidthAndHeight,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color.fromRGBO(238, 227, 235, 1)),
-                          ),
-                          Container(
-                            width: cirWidthAndHeight,
-                            height: cirWidthAndHeight,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color.fromRGBO(246, 240, 244, 1)),
-                          ),
-                          Container(
-                            width: cirWidthAndHeight,
-                            height: cirWidthAndHeight,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color.fromRGBO(53, 64, 53, 1)),
-                          ),
-                          Container(
-                            width: cirWidthAndHeight,
-                            height: cirWidthAndHeight,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color.fromRGBO(60, 72, 58, 1)),
-                          ),
-                          Container(
-                            width: cirWidthAndHeight,
-                            height: cirWidthAndHeight,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color.fromRGBO(169, 170, 192, 1)),
-                          ),
-                          Container(
-                            width: cirWidthAndHeight,
-                            height: cirWidthAndHeight,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color.fromRGBO(186, 178, 199, 1)),
-                          ),
+                          renderContainer(0xACA9BE),
+                          renderContainer(0xE1D1DE),
+                          renderContainer(0xEEE3EB),
+                          renderContainer(0xF6F0F4),
+                          renderContainer(0x354035),
+                          renderContainer(0x3C483A),
+                          renderContainer(0xA9AAC0),
+                          renderContainer(0xBAB2C7),
                         ],
                       )
                     ],
@@ -102,5 +55,8 @@ class Layout2 extends StatelessWidget {
             ),
           ],
         ));
+  }
+  Widget renderContainer(int color) {
+    return Container(width: cirWidthAndHeight, height: cirWidthAndHeight, color: Color(color));
   }
 }
